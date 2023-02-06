@@ -77,6 +77,35 @@ switch (i)
     }
     case 5:
     {
+        //16. Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
+        Console.WriteLine("Введите первое число  ");
+        int.TryParse(Console.ReadLine (), out int a);
+        Console.WriteLine("Введите второе число  ");
+        int.TryParse(Console.ReadLine (), out int b);
+        if (a == Math.Pow(b, 2))
+        {
+            Console.WriteLine($"Число {a} является квадратом числа {b}");
+            if (b == Math.Pow(a, 2))
+            {
+                Console.WriteLine($"Число {b} является квадратом числа {a}");
+            }
+        }    
+        else
+        {
+            if (b == Math.Pow(a, 2))
+            {
+                Console.WriteLine($"Число {b} является квадратом числа {a}");
+            }
+            else
+            {
+                Console.WriteLine($"Числа {b} и {a} не являетюся квадратом друг друга");
+            }
+            
+        }
+        break;
+    }
+    case 6:
+    {
         // Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
         Random random = new Random();
         int min = 100;
