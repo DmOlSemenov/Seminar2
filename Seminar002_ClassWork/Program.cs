@@ -52,27 +52,9 @@ switch (i)
     {
         // 14. Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.
         Console.WriteLine("Введите число  ");
-        int number1 = int.Parse(Console.ReadLine ());
-        int number2 = 7;
-        int number3 = 23;
-        int a = number1 % number2;
-        int b = number1 % number3;
-        if (a == 0)
-        {
-            if (b == 0)
-            {
-                Console.WriteLine("Кратно");
-            }
-            else
-            {
-                Console.WriteLine("Не кратно");
-            }
-        }
-        else
-        {
-            Console.WriteLine("Не кратно, попробуйте снова");
-        }
-
+        int.TryParse(Console.ReadLine(), out int num);
+        if (num % 7 == 0 && num % 23 == 0) Console.WriteLine($"Число {num} кратно и 7 и 23");           
+        else Console.WriteLine("Не кратно, попробуйте снова");
         break;
     }
     case 5:
@@ -122,23 +104,15 @@ switch (i)
         string[] days = new String[] {"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"};
         Console.WriteLine("Введите номер дня недели ");
         int day = int.Parse(Console.ReadLine());
-        if (day == 6)
+        if ((day == 6) || (day == 7))
         {
             Console.Write(days[day - 1]);
             Console.Write(" является выходным днем");
         }
         else
         {
-            if (day == 7)
-            {
-                Console.Write(days[day - 1]);
-                Console.Write(" является выходным днем");
-            }
-            else
-            {
-                Console.Write(days[day - 1]);
-                Console.Write(" не является выходным днем");
-            }
+            Console.Write(days[day - 1]);
+            Console.Write(" не является выходным днем");
         }
         break;
     }
