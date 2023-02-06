@@ -47,9 +47,35 @@ switch (i)
             Console.WriteLine($"Не кратно, остаток {b}");
         }        
         break;
-
-    } 
+    }
     case 4:
+    {
+        // 14. Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.
+        Console.WriteLine("Введите число  ");
+        int number1 = int.Parse(Console.ReadLine ());
+        int number2 = 7;
+        int number3 = 23;
+        int a = number1 % number2;
+        int b = number1 % number3;
+        if (a == 0)
+        {
+            if (b == 0)
+            {
+                Console.WriteLine("Кратно");
+            }
+            else
+            {
+                Console.WriteLine("Не кратно");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Не кратно, попробуйте снова");
+        }
+
+        break;
+    }
+    case 5:
     {
         // Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
         Random random = new Random();
