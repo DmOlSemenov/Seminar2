@@ -116,5 +116,31 @@ switch (i)
         break;
         
     } 
+    case 7:
+    {
+        // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+        string[] days = new String[] {"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"};
+        Console.WriteLine("Введите номер дня недели ");
+        int day = int.Parse(Console.ReadLine());
+        if (day == 6)
+        {
+            Console.Write(days[day - 1]);
+            Console.Write(" является выходным днем");
+        }
+        else
+        {
+            if (day == 7)
+            {
+                Console.Write(days[day - 1]);
+                Console.Write(" является выходным днем");
+            }
+            else
+            {
+                Console.Write(days[day - 1]);
+                Console.Write(" не является выходным днем");
+            }
+        }
+        break;
+    }
 
 }
